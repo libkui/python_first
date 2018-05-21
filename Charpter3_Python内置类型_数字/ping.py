@@ -50,4 +50,4 @@ def qyt_ping(dst):
 
 
 if __name__ == '__main__':
-    qyt_ping('137.78.5.254')
+    qyt_ping('114.114.114.114')
