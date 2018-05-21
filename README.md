@@ -6,6 +6,17 @@
 
 ![](https://gitee.com/qytanggit/Python_Basic/raw/master/image/logo/Logo.jpg)
 
+### 试听课程
+
+Youtube 乾颐堂现任明教教主Python基础课V3 1 Python介绍
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UTZdp35LslY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+Youtube 乾颐堂现任明教教主Python基础课V3 2 Python环境安装
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CqJ0VkN5ghg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+Youtube 乾颐堂现任明教教主Python基础课V3 3 Python内置类型 数字
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GYH2VuS8Rls" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### 报名课程请咨询亁颐堂官方网站
 
 [亁颐堂官网链接](http://www.qytang.com)
