@@ -20,10 +20,10 @@
 
 6. 创建角色（PSQL中的用户）与数据库实例:  
    [root@Fedora pgsql]# su - postgres  
-   -bash-4.3$ createuser qytangdbuser（创建用户）   
-   -bash-4.3$ createdb -e -O qytangdbuser qytangdb（创建数据库）  
-   CREATE DATABASE qytangdb OWNER qytangdbuser;（拥有者qytangdbuser）  
-   -bash-4.3$
+   -bash-4.3$ createuser qytangdbuser（创建用户）  
+-bash-4.3$ createdb -e -O qytangdbuser qytangdb（创建数据库）  
+CREATE DATABASE qytangdb OWNER qytangdbuser;（拥有者qytangdbuser）  
+-bash-4.3$
 
 7. 修改用户密码:  
    -bash-4.3$ psql  
