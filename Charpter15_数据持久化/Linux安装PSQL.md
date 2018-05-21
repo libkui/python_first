@@ -46,7 +46,7 @@
 10. 关闭防火墙:  
 [root@Fedora pgsql]# systemctl stop firewalld.service
 
-11.在其他服务器上连接:      
+11. 在其他服务器上连接:  
 [root@Fedora DataBase]# psql -U qytangdbuser -d qytangdb -h
 202.100.1.139  
 用户 qytangdbuser 的口令：  
@@ -54,6 +54,25 @@ psql (9.4.6, 服务器 9.4.7)
 输入 "help" 来获取帮助信息.  
 qytangdb=>
 
+12. 简单测试（1）:  
+    qytangdb=> create table test1(t1 int, t2 varchar(40));（创建表）  
+    CREATE TABLE  
+    qytangdb=> \d test1（查看表信息）  
+    资料表 "public.test1"  
+    栏位 | 型别 | 修饰词  
+    ------+-----------------------+-------- t1 | integer |  
+    t2 | character varying(40) |  
+    qytangdb=> insert into test1 (t1,t2) values (11, ‘welcome to qytang’
+    )（插入条目） INSERT 0 1  
+    qytangdb=> insert into test1 (t1,t2) values (12,‘welcome to
+    python’);（插入条目） INSERT 0 1
 
-
-
+13. 简单测试（2）:  
+    qytangdb=> select * from test1;（查询表条目）  
+    t1 | t2  
+    ----+-------------------  
+    11 | welcome to qytang  
+    12 | welcome to python  
+    (2 行记录)  
+    qytangdb=> drop table test1;（删除表）  
+    DROP TABLE     
