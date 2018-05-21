@@ -8,8 +8,7 @@
 
 ### 试听课程
 
-Youtube 乾颐堂现任明教教主Python基础课V3 1 Python介绍
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UTZdp35LslY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[Youtube 乾颐堂现任明教教主Python基础课V3 1 Python介绍](https://www.youtube.com/embed/UTZdp35LslY)
 
 Youtube 乾颐堂现任明教教主Python基础课V3 2 Python环境安装
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CqJ0VkN5ghg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
