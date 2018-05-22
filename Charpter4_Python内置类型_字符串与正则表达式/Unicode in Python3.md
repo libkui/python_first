@@ -1,5 +1,15 @@
 Unicode and UTF-8
 
+1. 所有东西（file， network）在计算机中都是以 byte 存储的。但是 byte
+本身没有含义，为了使 byte 表示文本，我们需要一套相应的编码方案（比如 ASCII）。
+
+2. 但是事实是世界上的文字很多，而 ASCII
+只能表示西方字符，要表示其他字符（比如中文）就无力了。因此每个国家都有一套自己的编码方案来编码自己国家的字符。但这样就产生了混乱（一个byte在不同的编码方案下产生的字符不同）。
+为了解决这个问题，产生了 Unicode，每种字符只有一个相应的 coding point
+表示。而将 Unicode 字符的 coding point map 到 bytes 的就是 UTF-8，
+UFT-16。 因此可以这么认为 **Unicode 是一套字符集，而 UFT-8 等是编码方案 **
+
+
 ![](https://gitee.com/qytanggit/Python_Basic/raw/master/image/Charpter4/unicode0.jpg)
 
 ![](https://gitee.com/qytanggit/Python_Basic/raw/master/image/Charpter4/unicode1.jpg)
