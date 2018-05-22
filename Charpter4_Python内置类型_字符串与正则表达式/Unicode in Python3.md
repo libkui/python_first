@@ -9,6 +9,10 @@ Unicode and UTF-8
 表示。而将 Unicode 字符的 coding point map 到 bytes 的就是 UTF-8，
 UFT-16。 因此可以这么认为 **Unicode 是一套字符集，而 UFT-8 等是编码方案 **
 
+Unicode in Python3   
+1. 在 Python3 中，有 str, bytes, bytearray。str type 存储的是 Unicode
+字符的coding point，而 bytes type 存储的是 bytes。而且在 Python3 中不会有
+bytes 和 str 的隐形转换。（在 Python2 中有，这也往往是bug的来源）
 
 ![](https://gitee.com/qytanggit/Python_Basic/raw/master/image/Charpter4/unicode0.jpg)
 
