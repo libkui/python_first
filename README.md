@@ -8,17 +8,19 @@
 
 ### 试听课程
 
+Youtube高清视频:   
 [Youtube 乾颐堂现任明教教主Python基础课V3 1 Python介绍](https://www.youtube.com/watch?v=UTZdp35LslY&t=24s)
 
 [Youtube 乾颐堂现任明教教主Python基础课V3 2 Python环境安装](https://www.youtube.com/watch?v=CqJ0VkN5ghg)
 
 [Youtube 乾颐堂现任明教教主Python基础课V3 3 Python内置类型 数字](https://www.youtube.com/watch?v=GYH2VuS8Rls&t=6s)
 
-[腾讯视频 乾颐堂现任明教教主Python基础课V3 1 Python介绍](http://www.qytang.com)
+腾讯视频高清视频:  
+[腾讯视频 乾颐堂现任明教教主Python基础课V3 1 Python介绍](https://v.qq.com/x/page/e0661ga59jy.html)
 
-[腾讯视频 乾颐堂现任明教教主Python基础课V3 2 Python环境安装](http://www.qytang.com)
+[腾讯视频 乾颐堂现任明教教主Python基础课V3 2 Python环境安装](https://v.qq.com/x/page/j0661qtyd44.html)
 
-[腾讯视频 乾颐堂现任明教教主Python基础课V3 3 Python内置类型 数字](http://www.qytang.com)
+[腾讯视频 乾颐堂现任明教教主Python基础课V3 3 Python内置类型 数字](https://v.qq.com/x/page/l06617xem2b.html)
 
 ### 报名课程请咨询亁颐堂官方网站
 
