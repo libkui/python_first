@@ -9,18 +9,16 @@
 import paramiko
 
 
-def paramiko_ssh(host, port=22, username='root', password='Cisc0123', cmd='ls'):
-    try:
-        ssh = paramiko.SSHClient()
-        ssh.load_system_host_keys()
-        ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect(host, port=port, username=username, password=password, timeout=5, compress=True)
-        stdin, stdout, stderr = ssh.exec_command(cmd)
-        x = stdout.read().decode()
-        return x
-    except Exception as e:
-        print(f'{host} 连接失败! {e}')
+def qytang_ssh(ip, username, password, port=22, cmd='ls'):
+    ssh = paramiko.SSHClient()
+    ssh.load_system_host_keys()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(ip, port=port, username=username, password=password, timeout=5, compress=True)
+    stdin, stdout, stderr = ssh.exec_command(cmd)
+    x = stdout.read().decode()
+    return x
 
 
 if __name__ == '__main__':
-    print(paramiko_ssh('172.16.1.102'))
+    print(qytang_ssh('172.16.1.102','root','Cisc0123'))
+    print(qytang_ssh('172.16.1.102', 'root', 'Cisc0123',cmd='pwd'))

@@ -7,9 +7,9 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 X = 100
-Y = [1,2]
-print(X,Y)
+Y = [1, 2]
+print(X, Y)
 
 if __name__ == '__main__':
-    print("X: ",X,end=' ')
-    print("Y: ",Y )
+    print("X: ", X, end=' ')
+    print("Y: ", Y)

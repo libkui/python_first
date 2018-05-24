@@ -16,6 +16,7 @@ import sys
 import re
 
 def ping_one(dst, id_no, seq_no, ttl_no):
+
     send_time = time.time()
     time_in_bytes = struct.pack('>d', send_time)
     ping_one_reply = sr1(IP(dst=dst, ttl=ttl_no) / ICMP(id=id_no, seq=seq_no) / time_in_bytes, timeout=1, verbose=False)
