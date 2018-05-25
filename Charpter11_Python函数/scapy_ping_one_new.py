@@ -21,7 +21,7 @@ def qytang_ping(ip):
 
 
 if __name__ == '__main__':
-    result = qytang_ping('172.16.1.254')
+    result = qytang_ping('137.78.5.254')
     if result[1]:
         print(result[0], '通!')
     else:
