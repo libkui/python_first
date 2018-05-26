@@ -7,7 +7,7 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 from xml.dom.minidom import Document
-from Source_DB import QYT_Teachers, QYT_Courses  # 导入字典
+from Source_DB import QYT_Teachers, QYT_Courses, kecheng_dict  # 导入字典
 
 doc = Document()
 root = doc.createElement('root')
@@ -18,7 +18,6 @@ QYT_Company.setAttribute('name', '亁颐堂')
 
 root.appendChild(QYT_Company)
 #############################################
-kecheng_dict = dict(安全='Security CCNP', 无线='Wireless CCNP', 数据中心='DataCenter CCNP', 路由交换='RS CCNP')
 for Department in QYT_Teachers:
     Depart = doc.createElement('部门')
     Depart.setAttribute('name', Department)

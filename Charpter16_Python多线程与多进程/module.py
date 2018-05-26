@@ -21,6 +21,7 @@ def qyt_multi(x,y,z):
         z += 1
         i += 1
         time.sleep(1)
+    # 返回计算结果，进程号，线程号
     return (sum, os.getpid(), threading.currentThread().ident)
 
 if __name__ == '__main__':
