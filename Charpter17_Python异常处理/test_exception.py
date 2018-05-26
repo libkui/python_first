@@ -6,9 +6,10 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
+
 def find_index(obj, index):
     print(obj[index])
 
 
 if __name__ == '__main__':
-    find_index('qytang', 5)
+    find_index(1000, 5)

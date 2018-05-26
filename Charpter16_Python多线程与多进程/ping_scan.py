@@ -43,7 +43,7 @@ if __name__ == '__main__':
     otherStyleTime = now.strftime("%Y-%m-%d_%H-%M-%S")
     scan_file_name = 'scan_save_pickle_' + otherStyleTime + '.pl'
     scan_file = open(scan_file_name, 'wb')
-    pickle.dump(ping_scan('172.16.1.0/24'), scan_file)
+    pickle.dump(ping_scan('196.21.5.0/24'), scan_file)
     scan_file.close()
     scan_file = open(scan_file_name, 'rb')
     scan_result_list = pickle.load(scan_file)

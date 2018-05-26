@@ -8,6 +8,10 @@
 
 
 import sqlite3
+import os
+
+if os.path.exists('qytangcode.sqlite'):
+    os.remove('qytangcode.sqlite')
 
 # Python字典对象，我们将把它写入SQLite数据库
 teachers_dict = [{'姓名' : '秦柯', '年龄' : 37, '部门' : '安全', '职位' : '讲师'},
