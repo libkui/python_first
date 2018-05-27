@@ -2,6 +2,7 @@
 
 * 介绍Windows Python环境安装
 * 介绍Linux Python环境安装
+* [码云插件下载链接]()
 * Pycharm IDE开发环境
 
     - 教主技术进化论 2018 第21期 PyCharm基本操作 0 目录简介:
