@@ -2,7 +2,7 @@
 
 * 介绍Windows Python环境安装
 * 介绍Linux Python环境安装
-* [码云插件下载链接]()
+* [码云插件下载链接](https://gitee.com/qytanggit/Python_Basic/raw/master/Charpter2_Python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/intellij-gitosc-2018.1.0.zip)
 * Pycharm IDE开发环境
 
     - 教主技术进化论 2018 第21期 PyCharm基本操作 0 目录简介:
