@@ -5,9 +5,8 @@
 * [码云插件下载链接](https://gitee.com/qytanggit/Python_Basic/raw/master/Charpter2_Python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/intellij-gitosc-2018.1.0.zip)
 * Pycharm IDE开发环境
 
-    - 教主技术进化论 2018 第21期 PyCharm基本操作 0 目录简介:  
-    https://ke.qq.com/webcourse/index.html#course_id=271956&term_id=100321201&taid=2197189304788564&vid=t1426p1da10
-
+  - [教主技术进化论 2018 第21期 PyCharm基本操作 0 目录简介:](https://ke.qq.com/webcourse/index.html#course_id=271956&term_id=100321201&taid=2197189304788564&vid=t1426p1da10)
+    
     - 教主技术进化论 2018 第21期 PyCharm基本操作 1 PyCharm Pro下载并安装  
     https://ke.qq.com/webcourse/index.html#course_id=271956&term_id=100321201&taid=2197193599755860&vid=t14268g0ux6
 
@@ -28,4 +27,6 @@
 
     - 教主技术进化论 2018 第21期 PyCharm基本操作 7 本地开发远程调试  
     https://ke.qq.com/webcourse/index.html#course_id=271956&term_id=100321201&taid=2197219369559636&vid=x14264iqll3
+
+* 如何安装码云插件，Fork项目，通过Pull Request提交作业
 
