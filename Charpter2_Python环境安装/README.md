@@ -6,9 +6,10 @@
 * Pycharm IDE开发环境
 
   - [教主技术进化论 2018 第21期 PyCharm基本操作 0 目录简介:](https://ke.qq.com/webcourse/index.html#course_id=271956&term_id=100321201&taid=2197189304788564&vid=t1426p1da10)
-    
-    - 教主技术进化论 2018 第21期 PyCharm基本操作 1 PyCharm Pro下载并安装  
-    https://ke.qq.com/webcourse/index.html#course_id=271956&term_id=100321201&taid=2197193599755860&vid=t14268g0ux6
+
+  - <a href="https://ke.qq.com/webcourse/index.html#course_id=271956&amp;term_id=100321201&amp;taid=2197193599755860&amp;vid=t14268g0ux6">教主技术进化论 2018 第21期 PyCharm基本操作 1 PyCharm
+    Pro下载并安装</a>
+
 
     - 教主技术进化论 2018 第21期 PyCharm基本操作 2 PyCharm创建Project  
     https://ke.qq.com/webcourse/index.html#course_id=271956&term_id=100321201&taid=2197197894723156&vid=b1426br5800
