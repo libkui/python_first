@@ -2,6 +2,7 @@ from scapy_ping_one_new import scapy_ping_one
 from multiprocessing.pool import ThreadPool
 import ipaddress
 
+
 def ping_scan(network):
     pool = ThreadPool(processes=150)
     net = ipaddress.ip_network(network)
@@ -32,7 +33,7 @@ if __name__ == '__main__':
     otherStyleTime = now.strftime("%Y-%m-%d_%H-%M-%S")
     scan_file_name = 'scan_save_pickle_' + otherStyleTime + '.pl'
     scan_file = open(scan_file_name, 'wb')
-    pickle.dump(ping_scan('192.168.50.0/24'),scan_file)
+    pickle.dump(ping_scan('192.168.2.0/24'), scan_file)
     scan_file.close()
     scan_file = open(scan_file_name, 'rb')
     scan_result_list = pickle.load(scan_file)
