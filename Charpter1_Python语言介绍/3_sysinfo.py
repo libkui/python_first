@@ -1,7 +1,8 @@
 import platform
 
-def TestPlatform( ):
-    print ("----------Operation System--------------------------")
+
+def test_platform():
+    print("----------Operation System--------------------------")
     #  获取Python版本
     print(platform.python_version())
 
@@ -11,10 +12,10 @@ def TestPlatform( ):
     #   计算机的网络名称，’acer-PC’
     print(platform.node())
 
-    #获取操作系统名称及版本号，’Windows-7-6.1.7601-SP1′
+    # 获取操作系统名称及版本号，’Windows-7-6.1.7601-SP1′
     print(platform.platform())
 
-    #计算机处理器信息，’Intel64 Family 6 Model 42 Stepping 7, GenuineIntel’
+    # 计算机处理器信息，’Intel64 Family 6 Model 42 Stepping 7, GenuineIntel’
     print(platform.processor())
 
     # 获取操作系统中Python的构建日期
@@ -23,18 +24,19 @@ def TestPlatform( ):
     #  获取系统中python解释器的信息
     print(platform.python_compiler())
 
-    if platform.python_branch()=="":
+    if platform.python_branch() == "":
         print(platform.python_implementation())
         print(platform.python_revision())
     print(platform.release())
     print(platform.system())
 
-    #print platform.system_alias()
+    # print platform.system_alias()
     #  获取操作系统的版本
     print(platform.version())
 
     #  包含上面所有的信息汇总
     print(platform.uname())
 
-if __name__ == "__main__" :
-    TestPlatform( )
+
+if __name__ == "__main__":
+    test_platform()
