@@ -12,7 +12,7 @@ logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 
 
-class qyt_ping:
+class QYTPING:
     def __init__(self, ip):
         self.ip = ip
         self.srcip = None
@@ -42,3 +42,22 @@ class qyt_ping:
             else:
                 print('.', end='', flush=True)
         print()
+
+    def __str__(self):
+        if not self.srcip:
+            return '<dstip: {0}, size: {1}>'.format(self.ip, self.length)
+        else:
+            return '<srcip: {0}, dstip: {1}, size: {2}>'.format(self.srcip, self.ip, self.length)
+
+
+class NewPing(QYTPING):
+    def ping(self):
+        for i in range(5):
+            result = sr1(self.pkt, timeout=1, verbose=False)
+            if result:
+                print('+', end='', flush=True)
+            else:
+                print('?', end='', flush=True)
+        print()
+
+
