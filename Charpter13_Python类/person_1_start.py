@@ -6,6 +6,7 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
+
 class Person:
     def __init__(self, name, age, pay=0, job=None):
         self.name = name
@@ -17,8 +18,10 @@ class Person:
 if __name__ == '__main__':
     bob = Person('Bob Smith', 42, 30000, 'software')
     sue = Person('Sue Jones', 45, 40000, 'hardware')
-    print(bob.name, sue.pay)
+    print(bob.name)
+    print(sue.pay)
 
     print(bob.name.split()[-1])
-    sue.pay *= 1.10
+    sue.pay += 10000
     print(sue.pay)
+

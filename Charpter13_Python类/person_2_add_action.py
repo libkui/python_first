@@ -14,12 +14,11 @@ class Person:
         self.pay = pay
         self.job = job
 
-    def lastName(self):
+    def getlastname(self):
         return self.name.split()[-1]
 
-    def giveRaise(self, percent):
+    def giveraise(self, percent):
         self.pay *= (1.0 + percent)
-        # self.pay *= (1.1 + percent)
 
 
 if __name__ == '__main__':
@@ -27,6 +26,6 @@ if __name__ == '__main__':
     sue = Person('Sue Jones', 45, 40000, 'hardware')
     print(bob.name, sue.pay)
 
-    print(bob.lastName())
-    sue.giveRaise(0.1)
+    print(bob.getlastname())
+    sue.giveraise(0.1)
     print(sue.pay)
