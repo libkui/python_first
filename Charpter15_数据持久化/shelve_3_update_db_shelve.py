@@ -9,7 +9,7 @@
 import shelve
 
 db = shelve.open('people-shelve')
-cq_bomb = db['cq_bomb']  #读取数据库键’cq_bomb’中的字典
-cq_bomb['pay'] *= 1.6 #更新字典
-db['cq_bomb'] = cq_bomb #把更新后的字典重新写回数据库键
+cq_bomb = db['cq_bomb']  # 读取数据库键'cq_bomb'中的字典
+cq_bomb['pay'] *= 1.6  # 更新字典
+db['cq_bomb'] = cq_bomb  # 把更新后的字典重新写回数据库键
 db.close()
