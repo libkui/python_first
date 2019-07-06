@@ -6,11 +6,9 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
-cq_bomb = {'name':'KE QIN', 'age':38, 'pay':10000, 'job':'Security'}
-tina = {'name':'Ting Zhang', 'age':35, 'pay':10000, 'job':'Sales'}
-ender = {'name':'Ya Jun Zhou', 'age':35, 'pay':10000, 'job':'RS'}
+cq_bomb = {'name': 'KE QIN', 'age': 38, 'pay': 10000, 'job': 'Security'}
+tina = {'name': 'Ting Zhang', 'age': 35, 'pay': 10000, 'job': 'Sales'}
+ender = {'name': 'Ya Jun Zhou', 'age': 35, 'pay': 10000, 'job': 'RS'}
 
-db = {}
-db['cq_bomb'] = cq_bomb
-db['tina'] = tina
-db['ender'] = ender
+db = {'cq_bomb': cq_bomb, 'tina': tina, 'ender': ender}
+
