@@ -7,13 +7,13 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 import logging
-logging.getLogger("scapy.runtime").setLevel(logging.ERROR)  # 清除报错
-from scapy.all import *
+logging.getLogger("kamene.runtime").setLevel(logging.ERROR)  # 清除报错
+from kamene.all import *
 import time
 import struct
 import random
-import sys
 import re
+
 
 def ping_one(dst, id_no, seq_no, ttl_no):
 
