@@ -7,7 +7,7 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 from xml.dom.minidom import Document
-from Source_DB import QYT_Teachers, QYT_Courses, kecheng_dict  # 导入字典
+from source_db import qyt_teachers, qyt_courses, kecheng_dict  # 导入字典
 
 doc = Document()
 root = doc.createElement('root')
@@ -18,7 +18,7 @@ QYT_Company.setAttribute('name', '亁颐堂')
 
 root.appendChild(QYT_Company)
 #############################################
-for Department in QYT_Teachers:
+for Department in qyt_teachers:
     Depart = doc.createElement('部门')
     Depart.setAttribute('name', Department)
     QYT_Company.appendChild(Depart)
@@ -33,7 +33,7 @@ for Department in QYT_Teachers:
     Teachers.setAttribute('name', '%s团队' % Department)
     Depart.appendChild(Teachers)
 
-    for Teacher in QYT_Teachers[Department]:
+    for Teacher in qyt_teachers[Department]:
         Teacher_Name = doc.createElement('老师')
         Teacher_Name.setAttribute('name', Teacher)
         Teachers.appendChild(Teacher_Name)
@@ -42,11 +42,11 @@ for Department in QYT_Teachers:
     Kecheng.setAttribute('name', kecheng_dict[Department])
     Depart.appendChild(Kecheng)
 
-    for Course in QYT_Courses[Department]:
+    for Course in qyt_courses[Department]:
         Kecheng_Name = doc.createElement('课程名')
         Kecheng_Name.setAttribute('name', Course)
         Kecheng.appendChild(Kecheng_Name)
 
-XML_File = open('XML_6_Auto_Write.xml', 'w',  encoding='utf-8')
+XML_File = open('xml_4_auto_write.xml', 'w',  encoding='utf-8')
 XML_File.write(doc.toprettyxml(indent='    '))
 XML_File.close()

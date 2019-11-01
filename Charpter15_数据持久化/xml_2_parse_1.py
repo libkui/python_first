@@ -8,7 +8,7 @@
 
 from xml.etree.ElementTree import parse
 
-tree = parse('XML_1_XML.xml')  # 打开分析的XML文件
+tree = parse('xml_1_xml.xml')  # 打开分析的XML文件
 
 root = tree.getroot()  # 找到根位置
 

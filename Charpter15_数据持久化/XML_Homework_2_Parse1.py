@@ -13,6 +13,12 @@ tree = parse('XML_Homework_1_XML.xml')  # 打开分析的XML文件
 
 root = tree.getroot()  # 找到根位置
 department_list = []
+print(dir(root))
+for x in root.getchildren():
+    print(x.tag)
+    print(x.attrib)
+
+
 for department in root.iter('部门'):
     # 找到部门的名字
     department_dict = {'部门名': department.get('name')}

@@ -208,6 +208,7 @@ Kecheng_Name = doc.createElement('课程名')
 Kecheng_Name.setAttribute('name', '交换')
 Kecheng.appendChild(Kecheng_Name)
 
-XML_File = open('XML_4_Write.xml', 'w', encoding='utf-8')
+XML_File = open('xml_3_write.xml', 'w', encoding='utf-8')
+print(type(doc))
 XML_File.write(doc.toprettyxml(indent='    '))
 XML_File.close()
