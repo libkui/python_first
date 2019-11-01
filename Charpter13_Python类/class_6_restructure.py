@@ -6,7 +6,7 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
-from person_5_format_str import Person
+from class_5_1_person_format_str import Person
 
 
 class Manager(Person):

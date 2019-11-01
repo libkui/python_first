@@ -9,10 +9,10 @@
 import logging
 
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
-from scapy.all import *
+from kamene.all import *
 
 
-class QYTPING:
+class Qytping:
     def __init__(self, ip):
         self.ip = ip
         self.srcip = None
@@ -50,7 +50,7 @@ class QYTPING:
             return '<srcip: {0}, dstip: {1}, size: {2}>'.format(self.srcip, self.ip, self.length)
 
 
-class NewPing(QYTPING):
+class Newping(Qytping):
     def ping(self):
         for i in range(5):
             result = sr1(self.pkt, timeout=1, verbose=False)

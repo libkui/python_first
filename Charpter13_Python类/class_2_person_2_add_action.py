@@ -14,14 +14,18 @@ class Person:
         self.pay = pay
         self.job = job
 
+    def getlastname(self): #  添加查询lastname的行为
+        return self.name.split()[-1]
+
+    def giveraise(self, percent): #  添加加薪的行为
+        self.pay *= (1.0 + percent)
+
 
 if __name__ == '__main__':
     bob = Person('Bob Smith', 42, 30000, 'software')
     sue = Person('Sue Jones', 45, 40000, 'hardware')
-    print(bob.name)
-    print(sue.pay)
+    print(bob.name, sue.pay)
 
-    print(bob.name.split()[-1])
-    sue.pay += 10000
+    print(bob.getlastname())
+    sue.giveraise(0.1)
     print(sue.pay)
-

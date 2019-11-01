@@ -6,7 +6,7 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
-from person_5_format_str import Person
+from class_2_person_2_add_action import Person
 
 
 class Manager(Person):
@@ -16,4 +16,6 @@ class Manager(Person):
 
 if __name__ == '__main__':
     tom = Manager(name='Tom Doe', age=50, pay=50000)
-    print(tom)
+    print(tom.getlastname())
+    tom.giveraise(.20)
+    print(tom.pay)
