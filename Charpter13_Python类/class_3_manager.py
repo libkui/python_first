@@ -9,8 +9,8 @@
 from class_2_person_2_add_action import Person
 
 
-class Manager(Person):
-    def giveraise(self, percent, bonus=0.1):
+class Manager(Person): # 继承Person类
+    def giveraise(self, percent, bonus=0.1): # 修改giveraise方法
         self.pay *= (1.0 + percent + bonus)
 
 
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     tom = Manager(name='Tom Doe', age=50, pay=50000)
     db = [bob, sue, tom]
     for obj in db:
-        obj.giveraise(0.2)
+        obj.giveraise(0.2) #  Person和Manager类的实例都拥有giveRaise这个方法
         print(obj.getlastname(), '=>', obj.pay)
 
 

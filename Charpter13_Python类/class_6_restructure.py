@@ -11,6 +11,7 @@ from class_5_1_person_format_str import Person
 
 class Manager(Person):
     def __init__(self, name, age, pay):
+        # 为Manager类产生的实例自动产生Job为'manager'
         Person.__init__(self, name, age, pay, 'manager')
 
     def giveraise(self, percent, bonus=0.1):
