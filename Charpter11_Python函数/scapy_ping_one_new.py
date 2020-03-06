@@ -7,8 +7,8 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 import logging
-logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
-from scapy.all import *
+logging.getLogger("kamene.runtime").setLevel(logging.ERROR)
+from kamene.all import *
 
 
 def qytang_ping(ip):
@@ -21,7 +21,7 @@ def qytang_ping(ip):
 
 
 if __name__ == '__main__':
-    result = qytang_ping('137.78.5.254')
+    result = qytang_ping('196.21.5.254')
     if result[1]:
         print(result[0], '通!')
     else:
