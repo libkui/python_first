@@ -15,7 +15,16 @@ class Manager(Person):
 
 
 if __name__ == '__main__':
+    # bob = Person('Bob Smith', age=42, pay=3000)
     tom = Manager(name='Tom Doe', age=50, pay=50000)
-    print(tom.getlastname())
     tom.giveraise(.20)
+    # print(bob.pay)
     print(tom.pay)
+    # # print(tom.getlastname())
+    # # tom.giveraise(.20)
+    # # print(tom.pay)
+    #
+    # bob.giveraise(0.1)
+    # tom.giveraise(0.1)
+    # print(bob.pay)
+    # print(tom.pay)
