@@ -8,8 +8,8 @@
 
 import logging
 
-logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
-from scapy.all import *
+logging.getLogger("kamene.runtime").setLevel(logging.ERROR)
+from kamene.all import *
 from random import randint
 
 

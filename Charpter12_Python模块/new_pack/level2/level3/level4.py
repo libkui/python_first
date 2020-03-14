@@ -6,5 +6,10 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
+
+def level4_print(x):
+    print(x)
+
+
 if __name__ == '__main__':
-    pass
+    level4_print('This is level 4')

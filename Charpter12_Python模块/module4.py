@@ -8,8 +8,13 @@
 
 X = 100
 Y = [1, 2]
-print(X, Y)
+
+
+def new_test(x, y):
+    return x + y
+
 
 if __name__ == '__main__':
-    print("X: ", X, end=' ')
+    print(new_test(1, 2))
+    print("X: ", X)
     print("Y: ", Y)

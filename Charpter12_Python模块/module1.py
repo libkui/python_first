@@ -6,6 +6,14 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
+a = 200
+b = [1, 2, 3, 4]
+
 
 def printer(x):
     print(x)
+
+
+if __name__ == '__main__':
+    print(printer.__name__)
+    printer(a)

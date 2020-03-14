@@ -5,6 +5,10 @@
 # 亁颐堂官网www.qytang.com
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
+from new_pack.level1 import A
+from new_pack.level2.level3 import B
+from new_pack.level2.level3.level4 import level4_print
 
-if __name__ == '__main__':
-    pass
+level4_print(A)
+level4_print(B)
+level4_print('欢迎来到乾颐堂!')

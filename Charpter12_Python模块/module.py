@@ -5,8 +5,11 @@
 # 亁颐堂官网www.qytang.com
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
+
+
 def qytang(x):
     print(x)
+
 
 if __name__ == '__main__':
     print('welcome to qytang')

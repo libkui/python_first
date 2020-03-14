@@ -7,4 +7,4 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 X = 100
-Y = [1,2]
+Y = [1, 2]
