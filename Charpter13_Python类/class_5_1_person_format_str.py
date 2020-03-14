@@ -21,17 +21,13 @@ class Person:
         self.pay *= (1.0 + percent)
 
     def __str__(self):
-        return '<%s => %s>' % (self.__class__.__name__, self.name)
+        return f'<{self.__class__.__name__} => {self.name}, {self.pay}, {self.job}>'
 
 
 if __name__ == '__main__':
     bob = Person('Bob Smith', 42, 30000, 'software')
     sue = Person('Sue Jones', 45, 40000, 'hardware')
-    print(bob.name, sue.pay)
 
-    print(bob.getlastname())
-    sue.giveraise(0.1)
-    print(sue.pay)
     print(bob)
     print(sue)
 
