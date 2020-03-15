@@ -12,4 +12,4 @@ def find_index(obj, index):
 
 
 if __name__ == '__main__':
-    find_index(1000, 5)
+    find_index('qytang', 'cisco')
