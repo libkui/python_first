@@ -9,7 +9,7 @@
 
 import sqlite3
 
-conn = sqlite3.connect('qytanghomework.sqlite')
+conn = sqlite3.connect('./sqlite_dir/qytanghomework.sqlite')
 cursor = conn.cursor()
 
 user_notify = """

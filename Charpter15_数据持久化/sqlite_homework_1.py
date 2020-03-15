@@ -15,7 +15,7 @@ homework_dict = [{'姓名': '学员1', '年龄': 37, '作业数': 1},
                  {'姓名': '学员3', '年龄': 32, '作业数': 10}]
 
 # 连接SQLite数据库
-conn = sqlite3.connect('qytanghomework.sqlite')
+conn = sqlite3.connect('./sqlite_dir/qytanghomework.sqlite')
 cursor = conn.cursor()
 
 # 执行创建表的任务
