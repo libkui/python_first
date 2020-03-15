@@ -7,5 +7,9 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 import module1
+import module2
 
 module1.printer('欢迎来到乾颐堂!')
+module1.printer(module1.a)
+module1.printer(module1.b)
+module2.printer('欢迎来到乾颐堂!')

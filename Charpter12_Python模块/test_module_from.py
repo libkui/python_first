@@ -5,6 +5,10 @@
 # 亁颐堂官网www.qytang.com
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
-from module1 import printer
+from module1 import printer, a, b
+from module2 import printer
 
 printer('欢迎来到乾颐堂!')
+printer(a)
+printer(b)
+

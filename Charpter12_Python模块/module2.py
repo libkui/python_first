@@ -8,3 +8,7 @@
 
 X = 100
 Y = [1, 2]
+
+
+def printer(x):
+    print(x)
