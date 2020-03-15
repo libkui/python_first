@@ -6,5 +6,14 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
+
+class Qyt:
+    def __init__(self, name_input, age_input):
+        self.name = name_input
+        self.age = age_input
+
+
 if __name__ == '__main__':
-    pass
+    qyt1 = Qyt('qinke', 40)
+    print(qyt1.name)
+    print(qyt1.age)

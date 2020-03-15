@@ -14,7 +14,10 @@ def netconf_if_ip(interface, address, mask):
     interface_name, interface_no = re.match('([a-zA-Z]*)([0-9].*)', interface).groups()
     with open(tem_path + 'interface_ip.xml') as f:
         netconf_template = Template(f.read())
-    netconf_payload = netconf_template.render(if_type=interface_name, if_no=interface_no, ip_address=address, net_mask=mask)
+    netconf_payload = netconf_template.render(if_type=interface_name,
+                                              if_no=interface_no,
+                                              ip_address=address,
+                                              net_mask=mask)
     return netconf_payload
 
 

@@ -7,12 +7,12 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 import json
-from source_db import qyt_teachers# 导入字典
+from source_db import qyt_teachers  # 导入字典
 
 print(qyt_teachers)  # 打印字典
 print(type(qyt_teachers))
 
-json_string = json.dumps(qyt_teachers, ensure_ascii=False)
+json_string = json.dumps(qyt_teachers, ensure_ascii=False, indent=4)
 print(json_string)
 print(type(json_string))
 
