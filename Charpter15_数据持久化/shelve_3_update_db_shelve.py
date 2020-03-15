@@ -17,8 +17,8 @@ db.close()
 
 
 db = shelve.open('people-shelve')
-datetime_now = db['datetime']  # 读取数据库键'cq_bomb'中的字典
-datetime_now += timedelta(days=4)  # 更新字典
+datetime_now = db['datetime']  # 读取数据库键'datetime'中的时间对象
+datetime_now += timedelta(days=4)  # 在原来的时间基础上加4天
 db['datetime'] = datetime_now  # 把更新后的字典重新写回数据库键
 db.close()
 

@@ -9,6 +9,9 @@
 import shelve
 
 db = shelve.open('people-shelve')
+print(db['cq_bomb'])
+
+print([k for k in db.keys()])
 for key in db:
 	print(key, '=>\n', db[key])
 

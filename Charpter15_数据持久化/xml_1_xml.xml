@@ -19,8 +19,7 @@
             <师资 name="安全团队">
                 <老师 name="秦柯"/>
                 <老师 name="李冰"/>
-                <老师 name="刘强龙"/>
-                <老师 name="杨金超"/>
+                <老师 name="尤旭阳"/>
             </师资>
             <课程 name="Security CCNP">
                 <课程名 name="CCNASec"/>
@@ -51,7 +50,7 @@
             </部门简介>
             <师资 name="无线团队">
                 <老师 name="秦柯"/>
-                <老师 name="刘强龙"/>
+                <老师 name="尤旭阳"/>
             </师资>
             <课程 name="Wireless CCNP">
                 <课程名 name="无线控制器"/>

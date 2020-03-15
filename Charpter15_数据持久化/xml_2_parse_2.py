@@ -14,8 +14,8 @@ from xml.dom import minidom
 
 xml_file = open('xml_1_xml.xml', 'r').read()  # 打开分析的XML文件
 
-xmldict = xmltodict.parse(xml_file, encoding='utf-8') # 读取xml并转换到OrderedDict字典[有序字典]
-
+xmldict = xmltodict.parse(xml_file, encoding='utf-8')  # 读取xml并转换到OrderedDict字典[有序字典]
+pprint(xmldict)
 # 不推荐转换到字典
 # real_dict = json.loads(json.dumps(xmldict)) # 转换OrderedDict字典到字典, 其实OrderedDict修改方式和字典相同
 #
@@ -31,9 +31,8 @@ xmldict = xmltodict.parse(xml_file, encoding='utf-8') # 读取xml并转换到Ord
 sec_teachers = xmldict['root']['公司']['部门'][1]['师资']['老师']  # 提取老师
 for sec_teacher in sec_teachers:
     print(sec_teacher['@name'])
-
+#
 xmldict['root']['公司']['部门'][1]['@name'] = '乾颐堂安全'  # 修改内容
-
 
 
 # 写回到XML
