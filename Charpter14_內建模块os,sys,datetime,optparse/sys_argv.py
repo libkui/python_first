@@ -15,3 +15,4 @@ if __name__ == '__main__':
     import sys
     # print(sys.argv[0])
     sys_argv(sys.argv[1], sys.argv[2])
+    # sys_argv(1, 2)
