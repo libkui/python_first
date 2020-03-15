@@ -12,7 +12,7 @@ import json
 from xml.dom import minidom
 
 
-xml_file = open('xml_1_xml.xml', 'r').read()  # 打开分析的XML文件
+xml_file = open('./xml_dir/xml_1_xml.xml', 'r').read()  # 打开分析的XML文件
 
 xmldict = xmltodict.parse(xml_file, encoding='utf-8')  # 读取xml并转换到OrderedDict字典[有序字典]
 pprint(xmldict)
@@ -36,7 +36,7 @@ xmldict['root']['公司']['部门'][1]['@name'] = '乾颐堂安全'  # 修改内
 
 
 # 写回到XML
-XML_File = open('xml_1_xmltodict.xml', 'w', encoding='utf-8')
+XML_File = open('./xml_dir/xml_1_xmltodict.xml', 'w', encoding='utf-8')
 # XML_File.write(minidom.parseString(xmltodict.unparse(real_dict)).toprettyxml(indent='    '))
 XML_File.write(minidom.parseString(xmltodict.unparse(xmldict)).toprettyxml(indent='    '))
 XML_File.close()

@@ -32,7 +32,6 @@ for Department in qyt_teachers:
     Teachers = doc.createElement('师资')
     Teachers.setAttribute('name', '%s团队' % Department)
     Depart.appendChild(Teachers)
-
     for Teacher in qyt_teachers[Department]:
         Teacher_Name = doc.createElement('老师')
         Teacher_Name.setAttribute('name', Teacher)
@@ -47,6 +46,6 @@ for Department in qyt_teachers:
         Kecheng_Name.setAttribute('name', Course)
         Kecheng.appendChild(Kecheng_Name)
 
-XML_File = open('xml_4_auto_write.xml', 'w',  encoding='utf-8')
+XML_File = open('./xml_dir/xml_4_auto_write.xml', 'w',  encoding='utf-8')
 XML_File.write(doc.toprettyxml(indent='    '))
 XML_File.close()
