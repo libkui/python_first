@@ -46,3 +46,10 @@ if __name__ == '__main__':
 
     print(bob)
     print(tom)
+
+    person_list = [bob, sue, tom]
+    for p in person_list:
+        p.giveraise(.1)
+
+    for p in person_list:
+        print(p.pay)

@@ -19,8 +19,8 @@ class Person:
 if __name__ == '__main__':
     bob = Person('Bob Smith', 42, 30000, 'software')  # 产生实例
     sue = Person('Sue Jones', 45, 40000, 'hardware')
-    print(bob.name)
-    print(sue.pay)
+    # print(bob.name)
+    # print(sue.pay)
 
     print(bob.name.split()[-1])  # 查询Lastname
     sue.pay *= 1.10  # 加薪

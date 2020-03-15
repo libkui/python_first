@@ -9,7 +9,7 @@
 from class_2_person_2_add_action import Person
 
 
-class Manager(Person): # 继承Person类
+class Manager(Person):  # 继承Person类
     def getfirstname(self):
         return self.name.split()[0]
 
@@ -31,12 +31,15 @@ if __name__ == '__main__':
     bob = Person(name='Bob Smith', age=42, pay=30000)
     sue = Person(name='Sue Jones', age=45, pay=40000)
     tom = Manager(name='Tom Doe', age=50, pay=50000)
-    # print(bob)
-    # print(tom)
-    print(tom.getfirstname())
-    db = [bob, sue, tom]
-    for obj in db:
-        obj.giveraise(0.1)  # Person和Manager类的实例都拥有giveRaise这个方法
-        print(obj.getlastname(), '=>', obj.pay)
+    print(bob)
+    print(tom)
+    # print(tom.getfirstname())
+    # print(tom.getlastname())
+    # print(bob.getlastname())
+    #
+    # db = [bob, sue, tom]
+    # for obj in db:
+    #     obj.giveraise(0.1)  # Person和Manager类的实例都拥有giveRaise这个方法
+    #     print(obj.getlastname(), '=>', obj.pay)
 
 
