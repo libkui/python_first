@@ -16,11 +16,11 @@ import random
 if __name__ == '__main__':
     # 多进程
     freeze_support()  # Windows 平台要加上这句，并且一定要放在if __name__ == '__main__':下,才能避免 RuntimeError
-    pool = ProcessPool()  # 有效控制并发进程或者线程数，默认为内核数(推荐)
-    cpus = cpu_count()#得到内核数的方法
-
+    # pool = ProcessPool()  # 有效控制并发进程或者线程数，默认为内核数(推荐)
+    # cpus = cpu_count() # 得到内核数的方法
+    # print(cpus)
     # 多线程
-    # pool = ThreadPool()
+    pool = ThreadPool()
 
     results = []
     for i in range(0, 10):

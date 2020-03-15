@@ -11,9 +11,8 @@
 
 import gevent
 from gevent import monkey
-
-monkey.patch_all()
 import requests
+monkey.patch_all()
 
 
 def get_body(i):
@@ -23,7 +22,11 @@ def get_body(i):
     return result
 
 
-tasks = [gevent.spawn(get_body, i) for i in range(3)]
+tasks = []
+for i in range(3):
+    tasks.append(gevent.spawn(get_body, i))
+# tasks = [gevent.spawn(get_body, i) for i in range(3)]
+
 all_result = gevent.joinall(tasks)
 for x in all_result:
     print(x.get())
