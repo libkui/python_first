@@ -8,7 +8,7 @@
 
 import shelve
 
-db = shelve.open('people-shelve')
+db = shelve.open('./pickle_dir/people-shelve')
 print(db['cq_bomb'])
 
 print([k for k in db.keys()])
