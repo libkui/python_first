@@ -23,10 +23,10 @@ test_dict['出生日期'] = (parser.parse(test_dict['出生日期']).date() + ti
 # 打印字典(第二次打印)
 print(test_dict)
 # 写入Python字典到JSON文件
-with open('JSON_Homework.json', 'w', encoding='utf-8') as f:
+with open('./json_dir/json_homework.json', 'w', encoding='utf-8') as f:
     json.dump(test_dict, f, ensure_ascii=False)
 # 读取JSON文件并转换为Python字典
-with open('JSON_Homework.json', 'r', encoding='utf-8') as f:
+with open('./json_dir/json_homework.json', 'r', encoding='utf-8') as f:
     test_dict_read = json.load(f)
 # 打印字典(第三次打印)
 print(test_dict_read)
