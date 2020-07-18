@@ -21,7 +21,8 @@ class Person:
         return self.name.split()[-1]
 
     def giveraise(self, percent):
-        self.pay *= (1.0 + percent)
+        # self.pay *= (1.0 + percent)
+        self.pay = int(self.pay * (1.0 + percent))
 
     def __str__(self):
         return '<%s => %s: %s, %s >' % (self.__class__.__name__, self.name, self.job, self.pay)

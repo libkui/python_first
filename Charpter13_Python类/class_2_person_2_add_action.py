@@ -18,7 +18,8 @@ class Person:
         return self.name.split()[-1]
 
     def giveraise(self, percent):  # 添加加薪的行为
-        self.pay *= (1.1 + percent)
+        # self.pay *= (1.1 + percent)
+        self.pay = int(self.pay * (1.0 + percent))
 
 
 if __name__ == '__main__':
