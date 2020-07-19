@@ -11,8 +11,8 @@
 
 import gevent
 from gevent import monkey
-import requests
 monkey.patch_all()
+import requests
 
 
 def get_body(i):
@@ -23,8 +23,13 @@ def get_body(i):
 
 
 tasks = []
+
 for i in range(3):
     tasks.append(gevent.spawn(get_body, i))
+
+# ip_list = []
+# for ip in ip_list:
+#     tasks.append(gevent.spawn(qyt_ssh, (ip, 'show run')))
 # tasks = [gevent.spawn(get_body, i) for i in range(3)]
 
 all_result = gevent.joinall(tasks)

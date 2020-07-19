@@ -14,7 +14,7 @@ def find_index(obj, index):
 if __name__ == '__main__':
     import re
     try:
-        find_index('qytang', 'cisco')
+        find_index(10000, 1)
     except IndexError:
         print('索引错误，可能是索引值超出范围！')
     except TypeError as e:

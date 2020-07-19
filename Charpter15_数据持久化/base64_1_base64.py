@@ -11,7 +11,7 @@ import base64
 
 def bytes_b64(convert_bytes):
     bytes_b64code = base64.b64encode(convert_bytes)
-    bytes_b64code = str(bytes_b64code)[2:-1]
+    bytes_b64code = str(bytes_b64code)[2:-1]  # b'rCF7' 剥除掉开始的b'和最后的'
     return bytes_b64code
 
 

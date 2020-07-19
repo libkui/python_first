@@ -6,14 +6,13 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
+a = 100
+b = 200
 
-def sys_argv(a, b):
-    print(int(a) + int(b))
+
+def qytang_times(x, y):
+    return x + y
 
 
 if __name__ == '__main__':
-    # sys_argv(4, 5)
-    import sys
-    print(sys.argv[0])
-    sys_argv(sys.argv[1], sys.argv[2])
-    # # sys_argv(1, 2)
+    print(qytang_times(a, b))

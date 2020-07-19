@@ -27,5 +27,5 @@ if __name__ == '__main__':
     # parser.add_argument(nargs='*', dest="hosts", help="Specify some hosts", default='10.1.1.1 10.1.1.2', type=str)
     args = parser.parse_args()
 
-    qyt_argparse(args.host, args.filename, args.iface)
-    # qyt_argparse(args.hosts, args.filename, args.iface)
+    # qyt_argparse(args.host, args.filename, args.iface)
+    qyt_argparse(args.hosts, args.filename, args.iface)

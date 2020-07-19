@@ -14,8 +14,8 @@ def find_index(obj, index):
 if __name__ == '__main__':
     try:
         find_index('qytang', 'cisco')
-    #    except:               #它会捕获所有异常，even system exitcalls and Ctrl-C key combinations
-    #        pass
+    # except:  # 它会捕获所有异常，even system exitcalls and Ctrl-C key combinations
+    #     pass
 
     except Exception as e:  # 推荐捕获除了system exitcalls and Ctrl-C key combinations以外的异常
         print(e)

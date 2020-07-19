@@ -7,8 +7,8 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 import random  # 导入random模块
-
 # 随机产生IP地址四个段落的数字
+
 section1 = random.randint(1, 255)
 section2 = random.randint(1, 255)
 section3 = random.randint(1, 255)
