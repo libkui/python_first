@@ -12,7 +12,7 @@ from source_db import qyt_teachers, qyt_courses  # 导入字典
 
 print('把Python对象转换为JSON格式，并且写入文件')
 with open('./json_dir/json_0_qyt_teachers.json', 'w', encoding='utf-8') as f:
-    json.dump(qyt_teachers, f, ensure_ascii=False)
+    json.dump(qyt_teachers, f, ensure_ascii=False)  # 不要确认所有的字符都能够被ASCII表示, 因为有中文
 
 with open('./json_dir/json_0_qyt_courses.json', 'w', encoding='utf-8') as f:
     json.dump(qyt_courses, f, ensure_ascii=False)
