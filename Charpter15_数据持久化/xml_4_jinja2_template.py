@@ -53,9 +53,13 @@ if __name__ == '__main__':
     import lxml.etree as ET
     if_ip_str = netconf_if_ip('Loopback0', '61.128.1.1', '255.255.255.0')
     print(if_ip_str)
-    print(type(netconf_if_ip('GigabitEthernet2', '61.128.1.1', '255.255.255.0')))
+    # 模板替换结果就是一个字符串
+    print(type(if_ip_str))
     parser = ET.XMLParser(recover=True)
+    # 从字符串fromstring, 转换为XML
     tree = ET.ElementTree(ET.fromstring(if_ip_str, parser=parser))
+    # 已经转换XML对象
     print(type(tree))
+    # 写入文件
     with open("./jinja2_xml/if_ip_xml.xml", "wb") as f:
         f.write(ET.tostring(tree))
