@@ -28,6 +28,11 @@ pprint(xmldict)
 # real_dict['root']['公司']['部门'][1]['@name'] = '乾颐堂安全'  # 修改内容
 
 # 推荐直接对OrderedDict字典进行处理
+departments = xmldict['root']['公司']['部门']
+
+for depart in departments:
+    print(depart['@name'])
+
 sec_teachers = xmldict['root']['公司']['部门'][1]['师资']['老师']  # 提取老师
 for sec_teacher in sec_teachers:
     print(sec_teacher['@name'])
