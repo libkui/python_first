@@ -21,7 +21,7 @@ def write_to_file(filename):
             wf.write(get_result)
             wf.close()
             # 装饰器添加的功能
-            return func(*args, **kwargs)  # 返回函数
+            return get_result  # 返回函数运行结果
 
         return with_write_to_file  # 返回函数 + 写入返回内容到文件
 
