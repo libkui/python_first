@@ -7,5 +7,5 @@
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
 
-def printer(x):
+def l2_module_printer(x):
     print(x)

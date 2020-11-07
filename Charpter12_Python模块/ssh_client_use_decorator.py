@@ -27,6 +27,7 @@ def ssh_client(ip, username, password, cmd):
         return x
 
     except Exception as e:
+        print(e)
         pass
 
 

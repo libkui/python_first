@@ -6,4 +6,8 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
-z  = 123
+l3_a = 123
+
+
+def l3_printer(x):
+    print(x)

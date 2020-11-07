@@ -9,12 +9,14 @@
 X = 100
 Y = [1, 2]
 
+print('import run this')
 
-def new_test(x, y):
+
+def add(x, y):
     return x + y
 
 
 if __name__ == '__main__':
-    print(new_test(1, 2))
+    print(add(1, 2))
     print("X: ", X)
     print("Y: ", Y)
