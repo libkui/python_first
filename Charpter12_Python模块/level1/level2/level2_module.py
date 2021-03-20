@@ -6,6 +6,8 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
+l2_c = 123
+
 
 def l2_module_printer(x):
     print(x)

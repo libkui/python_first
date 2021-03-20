@@ -6,7 +6,20 @@
 # 教主技术进化论拓展你的技术新边疆
 # https://ke.qq.com/course/271956?tuin=24199d8a
 
-from level1 import level2
+import level1
 
-print(level2.l2_a)
+level1.l1_printer(2, 3)
+
+from level1.level1_module import l1_module_printer
+l1_module_printer('test!')
+
+from level1.level2 import l2_a, l2_printer
+from level1.level2.level2_module import l2_module_printer, l2_c
+
+l2_printer(l2_c)
+l2_module_printer(l2_a)
+
+
+
+
 
