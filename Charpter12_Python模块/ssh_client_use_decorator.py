@@ -34,4 +34,4 @@ def ssh_client(ip, username, password, cmd):
 if __name__ == '__main__':
     print(ssh_client.__name__)
     print(ssh_client.__doc__)
-    print(ssh_client('137.78.5.34', 'root', 'Cisc0123', 'pwd'))
+    print(ssh_client('137.78.5.33', 'root', 'Cisc0123', 'pwd'))
