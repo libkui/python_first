@@ -8,26 +8,34 @@
 
 # https://thief.one/2017/02/20/Python协程/
 
-
-from ssh_client import ssh_client_no_async
+# gevent vs coroutine
+# https://news.ycombinator.com/item?id=22907716
 
 import gevent
 from gevent import monkey
-
 monkey.patch_all()
+import requests
 
 
-def get_ssh_result(i):
+def get_body(i):
     print("start", i)
-    result = ssh_client_no_async('localhost', 'root', 'Cisc0123', 'ls / -an', asy_id=i)
+    result = requests.get("https://www.baidu.com")
     print("end", i)
     return result
 
 
-tasks = [gevent.spawn(get_ssh_result, i) for i in range(3)]
+tasks = []
+
+for i in range(3):
+    tasks.append(gevent.spawn(get_body, i))
+
+# ip_list = []
+# for ip in ip_list:
+#     tasks.append(gevent.spawn(qyt_ssh, (ip, 'show run')))
+# tasks = [gevent.spawn(get_body, i) for i in range(3)]
+
 all_result = gevent.joinall(tasks)
 for x in all_result:
     print(x.get())
-
     # print(x.get().text)
 
