@@ -17,7 +17,7 @@ import requests
 
 def get_body(i):
     print("start", i)
-    result = requests.get("http://www.qytang.com")
+    result = requests.get("https://www.baidu.com")
     print("end", i)
     return result
 
