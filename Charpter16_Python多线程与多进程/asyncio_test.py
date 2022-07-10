@@ -1,14 +1,17 @@
 import requests
 import asyncio
+import os
+import threading
 
 loop = asyncio.new_event_loop()
 asyncio.set_event_loop(loop)
 
 
-async def pressure_test(host, id):
-    print(f'ID: {id} Started')
+async def pressure_test(host, task_id):
+    print(f'ID: {task_id} Started')
+    print(os.getpid(), threading.currentThread().ident)
     result = await loop.run_in_executor(None, requests.get, host)
-    print(f'ID: {id} Stopped')
+    print(f'ID: {task_id} Stopped')
     return result.status_code
 
 
@@ -29,4 +32,4 @@ def pressure_test_main(conns, url):
 
 
 if __name__ == '__main__':
-    print(pressure_test_main(10, 'http://www.baidu.com'))
+    print(pressure_test_main(5, 'http://www.baidu.com'))
