@@ -2,13 +2,13 @@
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, String, Integer, Text, Boolean, DateTime, ForeignKey, Table
-from sqlalchemy.orm import relationship, sessionmaker, backref
+from sqlalchemy import Column, String, Integer, DateTime, ForeignKey
+from sqlalchemy.orm import relationship
 import datetime
 
 tzutc_8 = datetime.timezone(datetime.timedelta(hours=8))  # 设置时区为东八区
 
-# echo=Ture----echo默认为False，表示不打印执行的SQL语句等较详细的执行信息，改为Ture表示让其打印。
+# echo=Ture----echo默认为False，表示不打印执行的SQL语句等较详细的执行信息，改为True表示让其打印。
 
 # check_same_thread=False----sqlite默认建立的对象只能让建立该对象的线程使用，
 # 而sqlalchemy是多线程的所以我们需要指定check_same_thread=False来让建立的对象任意线程都可使用。
@@ -19,9 +19,29 @@ tzutc_8 = datetime.timezone(datetime.timedelta(hours=8))  # 设置时区为东�
 # users.password AS users_password \nFROM users \nWHERE users.name = ?\n LIMIT ? OFFSET ?']
 # [parameters: [{}]] (Background on this error at: http://sqlalche.me/e/f405)
 
-engine = create_engine('sqlite:///sqlalchemy_sqlite3.db?check_same_thread=False',
-                       # echo=True
-                       )
+# engine = create_engine('sqlite:///sqlalchemy_sqlite3.db?check_same_thread=False',
+#                        # echo=True
+#                        )
+# -------------------------mysql-------------------------
+# default
+# engine = create_engine('mysql://scott:tiger@localhost/foo')
+# mysqlclient
+# engine = create_engine('mysql+mysqldb://scott:tiger@localhost/foo')
+# PyMySQL
+# engine = create_engine('mysql+pymysql://scott:tiger@localhost/foo')
+
+# -------------------------psql-------------------------
+# default
+# engine = create_engine('postgresql://scott:tiger@localhost/mydatabase')
+
+# psycopg2 (yum install postgresql-devel;pip3 install psycopg2-binary)
+# 修改认证方案
+# https://dothanhlong.org/fix-unable-to-connect-to-postgresql-server-scram-authentication-requires-libpq-version-10-or-above/
+# 运行./psql/docker_run_script.sh拉起psql
+engine = create_engine('postgresql+psycopg2://qytangdbuser:Cisc0123@137.78.5.34/qytangdb')
+
+# pg8000
+# engine = create_engine('postgresql+pg8000://scott:tiger@localhost/mydatabase')
 
 Base = declarative_base()
 
@@ -33,7 +53,6 @@ class User(Base):
     username = Column(String(64), nullable=False, index=True)
     password = Column(String(64), nullable=False)
     realname = Column(String(64), nullable=True)
-    # realname = Column(String(64), nullable=False, server_default='乾颐堂')
     email = Column(String(64), nullable=False, index=True)
 
     def __repr__(self):
@@ -58,7 +77,7 @@ class Interface(Base):
     __tablename__ = 'interface'
 
     id = Column(Integer, primary_key=True)
-    router_id = Column(Integer, ForeignKey("router.id"), nullable=False)
+    router_id = Column(Integer, ForeignKey("router.id", ondelete='CASCADE'), nullable=False)
     interface_name = Column(String(64), nullable=False)
     ip = Column(String(64), nullable=False)
     mask = Column(String(64), nullable=False)
@@ -74,7 +93,7 @@ class OSPFProcess(Base):
     __tablename__ = 'ospf_process'
 
     id = Column(Integer, primary_key=True)
-    router_id = Column(Integer, ForeignKey("router.id"), nullable=False)
+    router_id = Column(Integer, ForeignKey("router.id", ondelete='CASCADE'), nullable=False)
     processid = Column(Integer, nullable=False)
     routerid = Column(String(64), nullable=False)
     router = relationship('Router', back_populates="ospf_process")
@@ -89,7 +108,7 @@ class Area(Base):
     __tablename__ = 'area'
 
     id = Column(Integer, primary_key=True)
-    ospfprocess_id = Column(Integer, ForeignKey("ospf_process.id"), nullable=False)
+    ospfprocess_id = Column(Integer, ForeignKey("ospf_process.id", ondelete='CASCADE'), nullable=False)
     area_id = Column(Integer, nullable=False)
     ospf_process = relationship('OSPFProcess', back_populates="area")
     ospf_network = relationship('OSPFNetwork', back_populates="area")
@@ -104,7 +123,7 @@ class OSPFNetwork(Base):
     __tablename__ = 'ospf_network'
 
     id = Column(Integer, primary_key=True)
-    area_id = Column(Integer, ForeignKey("area.id"), nullable=False)
+    area_id = Column(Integer, ForeignKey("area.id", ondelete='CASCADE'), nullable=False)
     network = Column(String(64), nullable=False)
     wildmask = Column(String(64), nullable=False)
     area = relationship('Area', back_populates="ospf_network")
@@ -120,7 +139,7 @@ class CPUUsage(Base):
     __tablename__ = 'cpu_usage'
 
     id = Column(Integer, primary_key=True)
-    router_id = Column(Integer, ForeignKey("router.id"), nullable=False)
+    router_id = Column(Integer, ForeignKey("router.id", ondelete='CASCADE'), nullable=False)
     cpu_useage_percent = Column(Integer, nullable=False)
     cpu_useage_datetime = Column(DateTime(timezone='Asia/Chongqing'), default=datetime.datetime.now)
     router = relationship('Router', back_populates="cpu_usage")

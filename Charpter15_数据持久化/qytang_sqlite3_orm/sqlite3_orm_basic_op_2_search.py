@@ -18,7 +18,7 @@ print(user1.username)
 user1 = session.query(User).filter(User.username == 'qinke').one()
 print(user1.password)
 
-# sql的like, 可以实现正则表达式的批评
+# sql的like, 可以实现正则表达式的匹配
 user1 = session.query(User).filter(User.username.like('qin%')).one()
 print(user1.email)
 
