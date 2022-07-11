@@ -14,6 +14,7 @@ session.commit()
 
 user2 = User(username='tina',
              password='cisco',
+             realname='qyttina',
              email='tina@qytang.com')
 session.add(user2)
 session.commit()

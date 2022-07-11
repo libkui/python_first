@@ -66,9 +66,10 @@ class Router(Base):
     id = Column(Integer, primary_key=True)
     routername = Column(String(64), nullable=False, index=True)
     ip = Column(String(64), nullable=False, index=True)
-    interface = relationship('Interface', back_populates="router")
-    ospf_process = relationship('OSPFProcess', back_populates="router", uselist=False)  # uselist=False表示onetoone
-    cpu_usage = relationship('CPUUsage', back_populates="router")
+    interface = relationship('Interface', back_populates="router", passive_deletes=True)
+    # uselist=False表示onetoone
+    ospf_process = relationship('OSPFProcess', back_populates="router", uselist=False, passive_deletes=True)
+    cpu_usage = relationship('CPUUsage', back_populates="router", passive_deletes=True)
 
     def __repr__(self):
         return f"{self.__class__.__name__}({self.routername})"
@@ -82,7 +83,7 @@ class Interface(Base):
     interface_name = Column(String(64), nullable=False)
     ip = Column(String(64), nullable=False)
     mask = Column(String(64), nullable=False)
-    router = relationship('Router', back_populates="interface")
+    router = relationship('Router', back_populates="interface", passive_deletes=True)
 
     def __repr__(self):
         return f"{self.__class__.__name__}(Router: {self.router.routername} "\
@@ -97,8 +98,8 @@ class OSPFProcess(Base):
     router_id = Column(Integer, ForeignKey("router.id", ondelete='CASCADE'), nullable=False)
     processid = Column(Integer, nullable=False)
     routerid = Column(String(64), nullable=False)
-    router = relationship('Router', back_populates="ospf_process")
-    area = relationship('Area', back_populates="ospf_process")
+    router = relationship('Router', back_populates="ospf_process", passive_deletes=True)
+    area = relationship('Area', back_populates="ospf_process", passive_deletes=True)
 
     def __repr__(self):
         return f"{self.__class__.__name__}(Router: {self.router.routername} " \
@@ -111,8 +112,8 @@ class Area(Base):
     id = Column(Integer, primary_key=True)
     ospfprocess_id = Column(Integer, ForeignKey("ospf_process.id", ondelete='CASCADE'), nullable=False)
     area_id = Column(Integer, nullable=False)
-    ospf_process = relationship('OSPFProcess', back_populates="area")
-    ospf_network = relationship('OSPFNetwork', back_populates="area")
+    ospf_process = relationship('OSPFProcess', back_populates="area", passive_deletes=True)
+    ospf_network = relationship('OSPFNetwork', back_populates="area", passive_deletes=True)
 
     def __repr__(self):
         return f"{self.__class__.__name__}(Router: {self.ospfprocess.router.routername} " \
@@ -127,7 +128,7 @@ class OSPFNetwork(Base):
     area_id = Column(Integer, ForeignKey("area.id", ondelete='CASCADE'), nullable=False)
     network = Column(String(64), nullable=False)
     wildmask = Column(String(64), nullable=False)
-    area = relationship('Area', back_populates="ospf_network")
+    area = relationship('Area', back_populates="ospf_network", passive_deletes=True)
 
     def __repr__(self):
         return f"{self.__class__.__name__}(Router: {self.area.ospf_process.router.routername} " \
@@ -143,7 +144,7 @@ class CPUUsage(Base):
     router_id = Column(Integer, ForeignKey("router.id", ondelete='CASCADE'), nullable=False)
     cpu_useage_percent = Column(Integer, nullable=False)
     cpu_useage_datetime = Column(DateTime(timezone='Asia/Chongqing'), default=datetime.datetime.now)
-    router = relationship('Router', back_populates="cpu_usage")
+    router = relationship('Router', back_populates="cpu_usage", passive_deletes=True)
 
     def __repr__(self):
         return f"{self.__class__.__name__}(Router: {self.router.routername} " \
