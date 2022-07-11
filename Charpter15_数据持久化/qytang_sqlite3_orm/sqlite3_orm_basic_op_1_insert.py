@@ -1,5 +1,4 @@
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
 from sqlite3_orm_create_table import User, engine
 
 
@@ -13,7 +12,9 @@ user1 = User(username='qinke',
 session.add(user1)
 session.commit()
 
-user2 = User(username='tina', password='cisco', email='tina@qytang.com')
+user2 = User(username='tina',
+             password='cisco',
+             email='tina@qytang.com')
 session.add(user2)
 session.commit()
 

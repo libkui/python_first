@@ -1,6 +1,6 @@
 from sqlalchemy.orm import sessionmaker
 from sqlite3_orm_create_table import User, engine
-
+from sqlalchemy.orm.exc import NoResultFound, MultipleResultsFound
 
 Session = sessionmaker(bind=engine)
 session = Session()
@@ -13,6 +13,19 @@ for user in users:
 # one()类似于Django的 get()
 user1 = session.query(User).filter_by(username='qinke').one()
 print(user1.username)
+
+# 抑制找不到的错误
+try:
+    user1 = session.query(User).filter_by(username='test').one()
+except NoResultFound:
+    print('没有找到对象!')
+
+# 抑制找到多个的错误
+try:
+    user1 = session.query(User).filter_by(password='cisco').one()
+except MultipleResultsFound:
+    print('找到多个对象!')
+
 
 # 使用filter 过滤特定条件[SQL风格,但是需要通过 类名.属性名 的方式来过滤, 功能强大]
 user1 = session.query(User).filter(User.username == 'qinke').one()

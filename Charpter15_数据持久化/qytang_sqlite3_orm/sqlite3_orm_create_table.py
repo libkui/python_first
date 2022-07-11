@@ -19,9 +19,10 @@ tzutc_8 = datetime.timezone(datetime.timedelta(hours=8))  # 设置时区为东�
 # users.password AS users_password \nFROM users \nWHERE users.name = ?\n LIMIT ? OFFSET ?']
 # [parameters: [{}]] (Background on this error at: http://sqlalche.me/e/f405)
 
-# engine = create_engine('sqlite:///sqlalchemy_sqlite3.db?check_same_thread=False',
-#                        # echo=True
-#                        )
+# -------------------------sqlite3-------------------------
+engine = create_engine('sqlite:///sqlalchemy_sqlite3.db?check_same_thread=False',
+                       # echo=True
+                       )
 # -------------------------mysql-------------------------
 # default
 # engine = create_engine('mysql://scott:tiger@localhost/foo')
@@ -38,7 +39,7 @@ tzutc_8 = datetime.timezone(datetime.timedelta(hours=8))  # 设置时区为东�
 # 修改认证方案
 # https://dothanhlong.org/fix-unable-to-connect-to-postgresql-server-scram-authentication-requires-libpq-version-10-or-above/
 # 运行./psql/docker_run_script.sh拉起psql
-engine = create_engine('postgresql+psycopg2://qytangdbuser:Cisc0123@137.78.5.34/qytangdb')
+# engine = create_engine('postgresql+psycopg2://qytangdbuser:Cisc0123@137.78.5.34/qytangdb')
 
 # pg8000
 # engine = create_engine('postgresql+pg8000://scott:tiger@localhost/mydatabase')

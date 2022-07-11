@@ -12,7 +12,7 @@ users = session.query(User).filter_by(username='qinke')
 users.delete()
 session.commit()
 
-# 使用session.delete(x),删除某一行
+# 使用session.delete(x),删除某一行(对象)
 users = session.query(User)
 for user in users:
     session.delete(user)

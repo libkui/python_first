@@ -27,6 +27,7 @@ csr2_ospf = {"process_id": 1,
                                                    {'ip': "202.100.1.0", 'wildmask': "0.0.0.255"},
                                                    {'ip': "2.2.2.2", 'wildmask': "0.0.0.0"}]}]}
 
+# 汇总后数据
 all_network_data = [{'ip': "192.168.1.1", 'routername': 'CSR1', 'interfaces': csr1_ifs, 'ospf': csr1_ospf},
                     {'ip': "192.168.1.2", 'routername': 'CSR2', 'interfaces': csr2_ifs, 'ospf': csr2_ospf}]
 
